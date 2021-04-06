@@ -1,0 +1,345 @@
+---
+layout: post
+title: Example of Latex on Blog
+---
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath,amsthm,amssymb,mathrsfs,mathdots}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\pageprob}[2]{\mbox{\text{Page  }#1 \# #2}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\title{Math 131A \\ Homework Assignment 2}
+\author{Philip Tzu-Ruei Huang}
+\date{due January 15, at 11:59 pm}
+
+\begin{document}
+
+\maketitle
+\noindent \textbf{Assignment:}
+\\ \\
+\textbf{Problem I:} Let $E \subset \R$ be a non-empty set of real numbers which is bounded above. When $a > 0$ is a positive real number, let us set
+\[aE = \{ax; x \in E \}.\]
+Prove that the set $aE$ is bounded above and that
+\[\sup aE = a \sup E.\]
+Solve the following exercises from Ross: 3.5, 3.6, 4.1 (right hand column only, i.e. b,
+d, f, h, j, l, n, p, r, t, v), 4.6, 4.7, 4.8, 4.10, 4.11, 4.12, 4.14, 4.15, 5.2.
+\newpage
+\paragraph{Problem I:}
+Let $E \subset \R$ be a non-empty set of real numbers which is bounded above. When $a > 0$ is a positive real number, let us set
+\[aE = \{ax; x \in E \}.\]
+Prove that the set $aE$ is bounded above and that
+\[\sup aE = a \sup E.\]
+\begin{proof}
+Let $E \subset \R$ be a non-empty set of real numbers which is bounded above. When $a > 0$ is a positive real number, let us set
+\[aE = \{ax; x \in E \}.\]
+Since $E$ is bounded above, there exists a least upper bound of $E$ such that $x \leq \sup E$ $\forall x \in E$. By multiplying $a$ to both sides of the inequality, $ax \leq a\sup E$ $\forall x \in E$. Therefore, $a \sup E$ is the upper bound of $aE$, which implies that $aE$ is bounded above. With $\sup aE$ being the least upper bound of $aE$, the upper bound $a \sup E$ must be greater than or equal to $\sup aE$. Hence,
+\[\sup aE \leq a\sup E.\]
+Given that $aE$ is bounded above, there exists a least upper bound for $aE$ where $ax \leq \sup aE$ $\forall ax \in aE$. If we algebraically manipulate the inequality,
+\[ax \leq \sup aE\]
+\[x \leq \frac{\sup aE}{a} \quad \forall x \in E,\]
+which means that $\frac{\sup aE}{a}$ is the upper bound of $E$. With $\sup E$ being the least upper bound of $E$,
+\[\sup E \leq \frac{\sup aE}{a}.\]
+Therefore, if we multiply $a$ to both sides of the inequality,
+\[a \sup E \leq \sup aE.\]
+Since $\sup aE \leq a\sup E$ and $a\sup E \leq \sup aE$,
+\[\sup aE = a\sup E.\]
+\end{proof}
+\newpage
+\paragraph{3.5}
+\begin{enumerate}[label = \textbf{(\alph*)}]
+    \item Show $|b| \leq a$ if and only if $-a \leq b \leq a$.
+    \begin{proof}
+    ($\implies$) Assume $|b| \leq a$. Then $-a \leq -|b|$ by property (i) of Theorem 3.2 from page 16 of Ross' \emph{Elementary Analysis} (2nd ed.), which states that
+    \begin{center}
+        \emph{if $a \leq b$, then $-b \leq -a$.}
+    \end{center}
+    By Definition 3.3 from page 17 of Ross' \emph{Elementary Analysis} (2nd ed.), which is the definition of absolute value, $-a \leq -|b| \leq b \leq |b| \leq a$. Thus, by transitivity, $-a \leq b \leq a$.\\
+    ($\impliedby$) Assume $-a \leq b \leq a$.
+    \begin{itemize}
+        \item If $b \geq 0$, $|b| = b \leq a$. Thus, $|b| \leq a$ by transitivity.
+        \item If $b < 0$, $|b| = -b \leq a$ since $a \geq -b \geq -a$ by property (i) of Theorem 3.2. Thus, by transitivity, $|b| \leq a$.
+    \end{itemize}
+    Therefore, $|b| \leq a$ if and only if $-a \leq b \leq a$.
+    \end{proof}
+    \item Prove $\|a\| - \|b\| \leq |a-b|$ for all $a,b \in \R$.
+    \begin{proof}
+    Let $a,b \in \R$. By the associative and commutative property of real numbers,
+    \[|a| = |a + (b-b) | = |a+b-b| = |a-b+b| = |(a-b) + b|\]
+    By the Triangle Inequality, we know that
+    \[|(a-b) + b| \leq |a-b| + |b|.\]
+    Thus, $|a| \leq |a-b| + |b|$, and if we subtract $|b|$ to both sides of the inequality,
+    \[\|a\| - \|b\| \leq |a-b|.\]
+    \end{proof}
+\end{enumerate}
+\newpage
+\paragraph{3.6}
+\begin{enumerate}[label = \textbf{(\alph*)}]
+    \item Prove $|a+b+c| \leq |a| + |b| + |c|$ for all $a,b,c \in \R$. \emph{Hint:} Apply the triangle inequality twice. Do \emph{not} consider eight cases.
+    \begin{proof}
+    Let $a,b,c \in \R$. By Triangle Inequality, $|a+b+c| = |(a+b)+c| \leq |a+b| + |c| \leq |a| + |b| + |c|$. Thus, by transitivity, $|a+b+c| \leq |a|+|b|+|c|$.
+    \end{proof}
+    \item Use induction to prove
+    \[|a_1+a_2+\cdots+a_n| \leq |a_1| + |a_2| + \cdots + |a_n|\]
+    for $n$ numbers $a_1,a_2,\ldots,a_n$.\\ \\
+    \emph{Proof by Induction.}
+    Given $n \in \N$, our $n$th proposition is
+    \[P_n : ``|a_1+a_2+\cdots+a_n| \leq |a_1| + |a_2| + \cdots + |a_n| \text{ for } n \text{ numbers } a_1, a_2, \ldots, a_n."\]
+    \begin{itemize}
+        \item \underline{Basis:} If $n=1$, $P_1$ is true since $|a_1| \leq |a_1|$. In particular, $|a_1| = |a_1|$.
+        \item \underline{Inductive Hypothesis:} Suppose $P_n$ is true. That is, we suppose
+        \[|a_1+a_2+\cdots+a_n| \leq |a_1| + |a_2| + \cdots + |a_n|\]
+        for $n$ numbers $a_1,a_2,\ldots,a_n$ is true.
+        \item \underline{Inductive Step:} We wish to prove that $P_{n+1}$ holds based on the hypothesis. By Triangle Inequality,
+        \[|a_1+a_2+\cdots+a_n + a_{n+1}|\]
+        \[= |(a_1+a_2+\cdots+a_n) + a_{n+1}|\]
+        \[\leq |a_1+a_2+\cdots+a_n| + |a_{n+1}|\]
+        \[\leq |a_1| + |a_2| + \cdots + |a_n| + |a_{n+1}|.\]
+        Therefore, $P_{n+1}$ holds if $P_n$ holds.
+    \end{itemize}
+    By principle of mathematical induction, we conclude that $P_n$ is true for all natural numbers $n$. \qed
+\end{enumerate}
+\newpage
+\paragraph{4.1} For each set below that is bounded above, list three upper bounds for the set. Otherwise, write ``NOT BOUNDED ABOVE" or ``NBA."
+\begin{enumerate}[label = \textbf{(\alph*)}]
+\setcounter{enumi}{1}
+    \item $(0,1)$ : bounded above. Three upper bounds: $1,2,3$.
+    \addtocounter{enumi}{1}
+    \item $\{\pi,e\}$ : bounded above. Three upper bounds: $\pi,2\pi,3\pi$.
+    \addtocounter{enumi}{1}
+    \item $\{0\}$: bounded above. Three upper bounds: $0,1,2$.
+    \addtocounter{enumi}{1}
+    \item $\displaystyle \bigcup_{n=1}^{\infty}[2n,2n+1]$:\\ $\displaystyle \bigcup_{n=1}^{\infty}[2n,2n+1] = [2,3] \cup [4,5] \cup [6,7] \cup \cdots$\\
+    NOT BOUNDED ABOVE.
+    \addtocounter{enumi}{1}
+    \item$\{1-\frac{1}{3^n} : n \in \N \}$ : \\
+    $\{1-\frac{1}{3^n} : n \in \N \} = \{\frac{2}{3},\frac{8}{9},\frac{26}{27},\frac{80}{81},\ldots\}$. Note $\lim_{n\to\infty} 1-\frac{1}{3^n} = 1 - 0 = 1$.\\
+    Bounded above. Three upper bounds: 1, 2, 3.
+    \addtocounter{enumi}{1}
+    \item $\{r \in \Q : r < 2\}$: bounded above. Three upper bounds: $2, \frac{5}{2}, 3$.
+    \addtocounter{enumi}{1}
+    \item $\{r \in \Q : r^2 < 2\}$ : \\
+    $\{r \in \Q : r^2 < 2\} =\{r \in \Q : -\sqrt{2} < r < \sqrt {2}\}$. \\
+    Bounded above. Three upper bounds: $\frac{15}{10},\frac{16}{10},\frac{17}{10}$.
+    \addtocounter{enumi}{1}
+    \item $\{1,\frac{\pi}{3},\pi^2,10\}$ : bounded above. Three upper bounds: $10,11,12$.
+    \addtocounter{enumi}{1}
+    \item $\displaystyle \bigcap_{n=1}^{\infty} \left(1-\frac{1}{n}, 1+ \frac{1}{n}\right)$ : \\
+    $\displaystyle \bigcap_{n=1}^{\infty} \left(1-\frac{1}{n}, 1+ \frac{1}{n}\right) = (0,2) \cap \left(\frac{1}{2}, \frac{3}{2}\right) \cap \left(\frac{2}{3}, \frac{4}{3}\right) \cap \left(\frac{3}{4}, \frac{5}{4}\right) \cap \left(\frac{4}{5},\frac{6}{5}\right) \cap \cdots$. Note $\lim_{n\to\infty} \left(1-\frac{1}{n},1+\frac{1}{n}\right) = (1-0,1+0) = (1,1) = \{1\}$. \\
+    Bounded above. Three upper bounds: $1,2,3$.
+    \addtocounter{enumi}{1}
+    \item $\{x \in \R : x^3 < 8\}$ : \\
+    $\{x \in \R : x^3 < 8\} = \{x \in \R : x < 2\}$. \\
+    Bounded above. Three upper bounds: $2,3,4$.
+    \addtocounter{enumi}{1}
+    \item $\{\cos{\left(\frac{n\pi}{3}\right)} : n \in \N \}$ : \\
+    \[\{\cos{\left(\frac{n\pi}{3}\right)} : n \in \N \}\] 
+    \[ = \left\{\cos{\left(\frac{\pi}{3}\right)},
+    \cos{\left(\frac{2\pi}{3}\right)},
+    \cos{(\pi)},
+    \cos{\left(\frac{4\pi}{3}\right)},
+    \cos{\left(\frac{5\pi}{3}\right)},
+    \cos{(2\pi)}, \cos{\left(\frac{7\pi}{3}\right)}, \ldots \right\}\] 
+    \[= \left\{\frac{1}{2},-\frac{1}{2},-1,-\frac{1}{2},\frac{1}{2},1, \frac{1}{2}, \ldots \right\}.\]
+    Bounded Above. Three upper bounds: $1,2,3$.
+\end{enumerate}
+\newpage
+\paragraph{4.6}
+Let $S$ be a nonempty bounded subset of $\R$.
+\begin{enumerate}[label=(\alph*)]
+    \item Prove $\inf S \leq \sup S$. \emph{Hint:} This is almost obvious; your proof should be short.
+    \begin{proof}
+    Let $s \in S$. Since $\inf S$ is the greatest lower bound of $S$, and $\sup S$ is the least upper bound of $S$,
+    \[\inf S \leq s \leq \sup S.\]
+    Thus, by transitivity, $\inf S \leq \sup S$.
+    \end{proof}
+    \item What can you say about $S$ if $\inf S = \sup S$?
+    \\ \\
+    Given that $s \in S$, $\inf S \leq s \leq \sup S$, and $\inf S = \sup S$, $\inf S = s = \sup S$ must hold. Let's denote $x = \inf S = \sup S$. The set $S$ can only contain an element, which is $x$.
+\end{enumerate}
+\newpage
+\paragraph{4.7}
+Let $S$ and $T$ be nonempty bounded subsets of $\R$.
+\begin{enumerate}[label=(\alph*)]
+    \item Prove if $S \subseteq T$, then $\inf T \leq \inf S \leq \sup S \leq \sup T$.
+    \begin{proof}
+    Assume $S \subseteq T$. Let $s \in S$ and $t \in T$. Since $\inf T$ is the lower bound of $T$ and $\sup T$ is the upper bound of $T$, $\inf T \leq t \leq \sup T$. Since $S \subseteq T$, $s \in T$. Thus, $\inf T \leq s \leq \sup T$, which means that $\inf T$ is an lower bound of $S$ while $\sup T$ is an upper bound of $S$. Since $\inf S$ is the greatest lower bound of $S$ , $\inf T \leq \inf S$. Since $\sup S$ is the least upper bound of $S$, $\sup S \leq \sup T$. Therefore, $\inf T \leq \inf S \leq \sup S \leq \sup T$.
+    \end{proof}
+    \item Prove $\sup (S \cup T) = \max \{ \sup S,\sup T\}$. \emph{Note:} In part (b), do \emph{Note:} In part (b), do \emph{not} assume $S \subseteq T$.
+    \begin{proof}
+    Since $S \subseteq S \cup T$, $\sup S \leq \sup (S \cup T)$. Similarly, since $T \subseteq S \cup T$, $\sup T \leq \sup (S \cup T)$. Thus, $\max\{\sup S, \sup T\} \leq \sup(S \cup T)$. In order to show that $\sup (S \cup T) = \max \{ \sup S,\sup T\}$, we must also show that $\sup (S \cup T) \leq \max \{\sup S, \sup T\}$. Assume $x \in S$. Then $x \leq \sup S \leq \max\{\sup S, \sup T\}$. Assume $x \in T$. Then $x \leq \sup T \leq \max\{\sup S, \sup T\}$. Thus, $x \leq \max\{\sup S, \sup T\}$ $\forall x \in S \cup T$. Hence, $\max\{\sup S, \sup T\}$ is an upper bound of $S \cup T$, and as a result, $\sup (S \cup T) \leq \max\{\sup S, \sup T\}$ for $\sup (S \cup T)$ is the least upper bound of $S \cup T$. Since $\max \{\sup S, \sup T\} \leq \sup (S \cup T)$ and $\sup (S \cup T) \leq \max\{\sup S, \sup T\}$, $\sup (S \cup T) = \max \{\sup S, \sup T\}$.
+    \end{proof}
+\end{enumerate}
+\newpage
+\paragraph{4.8}
+Let $S$ and $T$ be nonempty subsets of $\R$ with the following property: $s \leq t$ for all $s \in S$ and $t \in T$.
+\begin{enumerate}[label=(\alph*)]
+    \item Observe $S$ is bounded above and $T$ is bounded below.
+    \\ \\
+    As further explanation, since there exists a real number $t$ such that $s \leq t$ for all $s \in S$, $S$ is bounded above. Since there exists a real number $s$ such that $s \leq t$ for all $t \in T$, $T$ is bounded below. 
+    \item Prove $\sup S \leq \inf T$.
+    \\ \\
+    According to page 22 of Ross' \emph{Elementary Analysis} (2nd ed.), if $S$ is bounded above, then $M = \sup S$ if and only if
+    \begin{enumerate}[label=(\roman*)]
+        \item $s \leq M$ for all $s \in S$, and
+        \item whenever $M_1 < M$, there exists $s_1 \in S$ such that $s_1 > M_1$.
+    \end{enumerate}
+    Similarly, $m = \inf S$ if and only if
+    \begin{enumerate}[label=(\roman*)]
+        \item $s \geq m$ for all $s \in S$, and
+        \item whenever $m_1 > m$, there exists $s_1 \in S$ such that $s_1 < m_1$.
+    \end{enumerate}
+    \emph{Proof by Contradiction.} Assume the contrary, $\inf T < \sup S$. Thus, by property (ii) of supremum, $\exists s_1 \in S$ such that $s_1 > \inf T$, and if $s_1 > \inf T$, $\exists t_1 \in T$ such that $\inf T \leq t_1 < s_1$. Thus, $s_1 > t_1$, which contradicts the assumption that $s \leq t$. Thus, $\inf T \geq \sup S$. \qed
+    \item Give an example of sets $S$ and $T$ where $S \cap T$ is nonempty.
+    \\ \\
+    Consider $S = [0,2]$ and $T = [2,3]$. Note that $S \cap T = \{2\}$, which is nonempty.
+    \item Give an example of sets $S$ and $T$ where $\sup S = \inf T$ and $S \cap T$ is the empty set.
+    \\ \\
+    Consider $S = [0,2)$ and $T = (2,3]$. Note that $S \cap T = \emptyset$ and that $\sup S = 2$ and $\inf T = 2$. Thus, $\sup S = \inf T$.
+\end{enumerate}
+
+\newpage
+\paragraph{4.10}
+Prove that if $a > 0$, then there exists $n \in \N$ such that $\frac{1}{n} < a < n$.
+\begin{proof}
+The Archimedean Property states that if $a >0$ and $b>0$, then for $n \in \N$, we have $n a > b$. Given $a > 0$ and $1 >0$, for $n_1 \in \N$, we have 
+\[n_1 a > 1,\]
+and as a result,
+\[a > \frac{1}{n_1} \text{, or } \frac{1}{n_1} < a.\]
+Note that for $n_2 \in \N$, the inequality
+\[n_2 \cdot 1 > a\]
+also applies with the Archimedean Property. Thus, 
+\[n_2 > a \text{, or } a < n_2.\]
+Consider $n = \max \{n_1, n_2\}$. Since
+\[a > \frac{1}{n_1} \geq \frac{1}{n}\]
+and
+\[a < n_2 \leq n \text{,}\]
+\[\frac{1}{n} < a < n.\]
+\end{proof}
+\newpage
+\paragraph{4.11}
+Consider $a,b \in \R$ where $a < b$. Use Denseness of $\Q$ to show there are infinitely many rationals between $a$ and $b$.
+\\ \\
+\emph{Proof by Induction.} By the Denseness of $\Q$, $\exists r_1 \in \Q$ such that $a < r_1 < b$. Similarly, by the Denseness of $\Q$, $\exists r_2 \in \Q$ such that $a < r_2 < r_1$. If we continue, we have $a < r_n < r_{n-1} < \cdots r_2 < r_1 < b$ where $n$ is the times we use Denseness of $\Q$. Given $n \in \N$, assume $\exists r_n \in \Q$ such that $a < r_n < b$. Then, by the Denseness of $\Q$, $\exists r_{n+1} \in \Q$ such that $a < r_{n+1} < r_n$. Thus, by the principle of induction, there are infinitely many rationals between $a$ and $b$ given $a,b \in \R$. In other words, $\exists r_1, r_2, \ldots \in (a,b) \cap \Q$. \qed
+\newpage
+\paragraph{4.12}
+Let $\I$ be the set of real numbers that are not rational; elements of $\I$ are called \emph{irrational numbers}. Prove if $a < b$, then there exists $x \in \I$ such that $a < x < b$. \emph{Hint}: First show $\{r+\sqrt{2} : r \in \Q\} \subseteq \I$.
+\newpage
+\paragraph{4.14}
+Let $A$ and $B$ be nonempty bounded subsets of $\R$, and let $A + B$ be the set of all sums $a+b$ where $a \in A$ and $b \in B$.
+\begin{enumerate}[label=(\alph*)]
+    \item Prove $\sup (A+B) = \sup A + \sup B$. \emph{Hint:} To show $\sup A + \sup B \leq \sup (A+B)$, show that for each $b \in B$, $\sup (A+B)-b$ is an upper bound for $A$, hence $\sup A \leq \sup (A+B)-b$. Then show $\sup (A+B) - \sup A$ is an upper bound for $B$.
+    \begin{proof}
+    Given that $A$ and $B$ are bounded, $A$ and $B$ both have least upper bounds as shown in the following.
+    \begin{itemize}
+        \item $a \leq \sup A$ $\forall a \in A$
+        \item $b \leq \sup B$ $\forall b \in B$
+    \end{itemize}
+    Let $x \in (A+B)$, then $x = a+b$ for some $a \in A$ and $b \in B$. Note that 
+    \[a+b \leq \sup A + b \leq \sup A + \sup B.\]
+    Thus, $(A+B)$ is bounded above since 
+    \[x \leq \sup A + \sup B \text{ for } x \in (A+B).\]
+    With $\sup A + \sup B$ being the upper bound of $(A+B)$ and $\sup (A+B)$ being the least upper bound of $(A+B)$,
+    \[\sup (A+B) \leq \sup A + \sup B.\]
+    Now to show that $\sup A + \sup B \leq \sup (A+B)$, we first need to show that for each $b \in B$, $\sup (A+B) - b$ is an upper bound for $A$. Since $\sup (A+B)$ is the least upper bound of $(A+B)$,
+    \[a+b \leq \sup (A+B) \text{ for } a+b \in (A+B),\]
+    which implies that 
+    \[a \leq \sup (A+B) -b \text{ for } a \in A.\]
+    Thus, $\sup (A+B) - b$ is an upper bound of $A$. With $\sup A$ being the least upper bound of $A$, we have
+    \[\sup A \leq \sup (A+B) - b.\]
+    If we apply algebraic manipulation to the inequality, we have $b \leq \sup (A+B) - \sup A$ for $b \in B$ as shown below.
+    \[\sup A \leq \sup (A+B) - b\]
+    \[\sup A + b \leq \sup (A+B)\]
+    \[b \leq \sup (A+B) - \sup A\]
+    Thus, $\sup (A+B) - \sup A$ is an upper bound for $B$. With $\sup B$ being the least upper bound for $B$, we have
+    \[\sup B \leq \sup (A+B) - \sup A.\]
+    By adding $\sup A$ to both sides of the inequality, we have
+    \[\sup A + \sup B \leq \sup (A+B).\]
+    Since $\sup (A+B) \leq \sup A + \sup B$ and $\sup A + \sup B \leq \sup (A+B)$,
+    \[\sup (A+B) = \sup A + \sup B.\]
+    \end{proof}
+    \item Prove $\inf (A+B) = \inf A + \inf B$.
+    \begin{proof}
+    Given that $A$ and $B$ are bounded, $A$ and $B$ both have greatest lower bounds as shown in the following.
+    \begin{itemize}
+        \item $a \geq \inf A$ $\forall a \in A$
+        \item $b \geq \inf B$ $\forall b \in B$
+    \end{itemize}
+    Let $x \in (A+B)$, then $x = a+b$ for some $a \in A$ and $b \in B$. Note that 
+    \[a+b \geq \inf A + b \geq \inf A + \inf B.\]
+    Thus, $(A+B)$ is bounded below since 
+    \[x \geq \inf A + \inf B \text{ for } x \in (A+B).\]
+    With $\inf A + \inf B$ being the lower bound of $(A+B)$ and $\inf (A+B)$ being the greatest lower bound of $(A+B)$,
+    \[\inf (A+B) \geq \inf A + \inf B.\]
+    Now to show that $\inf (A+B) \leq \inf A + \inf B$, we need to first show that for each $b \in B$, $\inf (A+B) - b$ is a lower bound for $A$. Since $\inf (A+B)$ is the greatest lower bound of $(A+B)$,
+    \[a+b \geq \inf (A+B) \text{ for } a+b \in (A+B),\]
+    which implies that
+    \[a \geq \inf (A+B) - b \text{ for } a \in A.\]
+    Thus, $\inf (A+B) - b$ is a lower bound of $A$. With $\inf A$ being the greatest lower bound of $A$, we have
+    \[\inf A \geq \inf (A+B) - b.\]
+    If we apply algebraic manipulation to the inequality, we have $b \geq \inf (A+B) - \inf A$ for $b \in B$ as shown below.
+    \[\inf A \geq \inf (A+B) - b\]
+    \[\inf A + b \geq \inf (A+B)\]
+    \[b \geq \inf (A+B) - \inf A\]
+    Thus, $\inf (A+B) - \inf A$ is a lower bound for $B$. With $\inf B$ being the greatest lower bound for $B$, we have
+    \[\inf B \geq \inf (A+B) - \inf A.\]
+    By adding $\inf A$ to both sides of the inequality, we have
+    \[\inf A + \inf B \geq \inf(A+B).\]
+    Since $\inf (A+B) \geq \inf A + \inf B$ and $\inf A + \inf B \geq \inf (A+B)$,
+    \[\inf (A+B) = \inf A + \inf B.\]
+    \end{proof}
+\end{enumerate}
+\newpage
+\paragraph{4.15}
+Let $a,b \in \R$. Show if $a \leq b + \frac{1}{n}$ for all $n \in \N$, then $a \leq b$. Compare Exercise 3.8.
+\\ \\
+\emph{Proof by Contradiction.}
+Let $a,b \in \R$, and $a \leq b + \frac{1}{n}$ for all $n \in \N$. We would like to show that $a \leq b$. Assume the contrary, $a>b$. Then $a-b > 0$. Since $a-b>0$ and $1>0$, by the Archimedian Property, $\exists n_0 \in \N$ such that $n_0 (a-b) > 1 $. If we algebraically manipulate the inequality, $a > b + \frac{1}{n_0}$ as shown below.
+\[n_0 (a-b) > 1\]
+\[a-b > \frac{1}{n_0}\]
+\[a > b + \frac{1}{n_0}\]
+Thus, by contradiction, $a \leq b$ given that $a \leq b + \frac{1}{n}$ for all $n \in \N$. \qed
+\newpage
+\paragraph{5.2} Give the infimum and supremum of each set listed in Exercise 5.1.
+\begin{enumerate}[label = \textbf{(\alph*)}]
+    \item $\{x \in \R : x < 0\}$
+    \begin{itemize}
+        \item $\inf \{x \in \R : x < 0\} = -\infty$
+        \item $\sup \{x \in \R : x < 0\} = 0$
+    \end{itemize}
+    \item $\{x \in \R : x^3 \leq 8\}$
+    \[\{x \in \R : x^3 \leq 8\} = \{x \in \R : x \leq 2\}\]
+    \begin{itemize}
+        \item $\inf \{x \in \R : x^3 \leq 8\} = -\infty$
+        \item $\sup \{x \in \R : x^3 \leq 8\} = 2$
+    \end{itemize}
+    \item $\{x^2 : x \in \R\}$
+    \[\{x^2 : x \in \R\} = \{\sqrt{x} : x \in \R \}\]
+    \begin{itemize}
+        \item Since $\sqrt{x} > 0$, $\inf \{x^2 : x \in \R\} = 0$.
+        \item Since $\displaystyle \lim_{x \to \infty} \sqrt{x} = \infty$, $\sup \{x^2 : x \in \R\} = \infty$.
+    \end{itemize}
+    \item $\{x \in \R: x^2 < 8\}$
+    \[\{x \in \R: x^2 < 8\} = \{x \in \R : x < 2\sqrt{2}\}\]
+    \begin{itemize}
+        \item $\inf \{x \in \R: x^2 < 8\} = -2 \sqrt{2}$
+        \item $\sup \{x \in \R: x^2 < 8\} = 2 \sqrt{2}$
+    \end{itemize}
+\end{enumerate}
+\end{document}
