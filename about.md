@@ -12,4 +12,4 @@ I like to play tennis during my free time.
 
 ### Contact me
 
-[philhuang74@gmail.com](mailto:philhuang74@gmail.com)
+[philhuang74@gmail.com](mailto:philhuang74[at]gmail.com)
