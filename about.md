@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-Some information about you!
+I am from Taiwan. I am currently a student at UCLA.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I like to play tennis during my free time. 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[philhuang74@gmail.com](mailto:philhuang74@gmail.com)
