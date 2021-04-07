@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Another Page
-permalink: /anotherone/
+permalink: /extra/
 ---
 
 Some information about you!
