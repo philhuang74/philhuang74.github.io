@@ -9,3 +9,5 @@ permalink: /extra/
 #  <source src="movie.ogg" type="video/ogg">
 #Your browser does not support the video tag.
 #</video>
+
+![IMG_0848](../images/IMG_0848)
