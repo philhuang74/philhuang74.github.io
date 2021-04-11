@@ -10,4 +10,4 @@ permalink: /extra/
 #Your browser does not support the video tag.
 #</video>
 
-![IMG_0848](../images/IMG_0848)
+![IMG_0848.jpg](../images/IMG_0848.jpg)
