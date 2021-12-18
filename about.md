@@ -4,12 +4,13 @@ title: About Me
 permalink: /about/
 ---
 
-I am from Taiwan. I am currently a student at UCLA.
+I am Taiwanese American.
 
-### More Information
+### Interests
 
-I like to play tennis during my free time. 
+I am a Senior at UCLA looking for jobs in Software Development. 
 
-### Contact me
+
+### Email
 
 [philhuang74\[at\]gmail.com](mailto:philhuang74@gmail.com)
