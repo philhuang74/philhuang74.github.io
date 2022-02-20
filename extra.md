@@ -41,11 +41,11 @@ Math 115H - Enriched Differential Vector Calculus
 Math 117 Integral Vector Calculus
 Math 199 - Introduction to Logic and Set Theory
 Math 224 - Geometry
+Math 297H - Mathematics Honors Independent Project
 CSC 108 - Scientific Computing
 CSC 118 - Computer and Logic Design
 CSC 120 - Programming on Purpose
 
-Math 297H - Mathematics Honors Independent Project
 Math 332 - Abstract Algebra
 Math 340 - Linear Algebra
 
