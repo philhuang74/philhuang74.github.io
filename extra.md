@@ -6,7 +6,7 @@ permalink: /extra/
 
 UCLA
 
-Math 33A - Linear Algebra and Applications
+Math 33A - Linear Algebra and Applications \n
 Math 33B - Differential Equations
 Math 42 - Intro to Mathematical Modeling
 Stats 13 - Stats in Life and Health Science
@@ -26,7 +26,7 @@ Math 177 - Theory of Interest and Applications
 Math 182 - Algorithms
 Stats 100A - Introduction to Probability
 Stats 100B - Introduction to Mathematical Statistics
-Stat 100C - Linear Models
+Stas 100C - Linear Models
 Stats 101A - Introduction to Data Analysis and Regression
 Stats 101C - Introduction to Statistical Models and Data Mining
 Stats 102A - Introduction to Computational Statistics with R
