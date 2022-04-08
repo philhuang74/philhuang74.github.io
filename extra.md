@@ -20,18 +20,20 @@ CS 32 - Data Structures
 
 Math 118 - Mathematical Methods of Data Theory
 Math 131A - Real Analysis
-Math 156 - Machine Learning (Spring)
+Math 156 - Machine Learning 
 Math 168 - Introduction to Networks
 Math 177 - Theory of Interest and Applications
 Math 182 - Algorithms
 Stats 100A - Introduction to Probability
 Stats 100B - Introduction to Mathematical Statistics
+Stat 100C - Linear Models
 Stats 101A - Introduction to Data Analysis and Regression
 Stats 101C - Introduction to Statistical Models and Data Mining
 Stats 102A - Introduction to Computational Statistics with R
-Stats 102B - Introduction to Computation and Optimization with R (Spring)
+Stats 102B - Introduction to Computation and Optimization with R
 Stats 147 - Data Technologies for Data Scientists
 Stats M148 - Experience of Data Science
+Stats C183 - Statistical Models in Finance
 Stats 184 - Societal Impacts of Data
 EE Biol M178 - Modeling and Simulation of Biological Systems
 
