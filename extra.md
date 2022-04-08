@@ -6,7 +6,7 @@ permalink: /extra/
 
 UCLA
 
-Math 33A - Linear Algebra and Applications \n
+Math 33A - Linear Algebra and Applications
 Math 33B - Differential Equations
 Math 42 - Intro to Mathematical Modeling
 Stats 13 - Stats in Life and Health Science
